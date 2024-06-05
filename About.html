@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Include your CSS and other metadata here -->
+    <style>
+        /*--------------about--------------*/
+        #about {
+            padding: 80px 0;
+            align-items: center;
+            color: #ababab;
+            background-color: black;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .about-col-1 {
+            flex-basis: 35%;
+        }
+
+        .about-col-1 img {
+            width: 108%;
+            border-radius: 12px;
+        }
+
+        .about-col-2 {
+            flex-basis: 60%;
+        }
+
+        .sub-title {
+            font-size: 60px;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .tab-titles {
+            display: flex;
+            margin: 20px 0 40px;
+        }
+
+        .tab-links {
+            margin-right: 50px;
+            font-size: 18px;
+            font-weight: 500;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .tab-links::after {
+            content: '';
+            width: 0;
+            height: 3px;
+            background: #ff004f;
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            transition: 0.5s;
+        }
+
+        .tab-links.active-link::after {
+            width: 50%;
+        }
+
+        .tab-contents ul li {
+            list-style: none;
+            margin: 10px 0;
+        }
+
+        .tab-contents ul li span {
+            color: #b54769;
+            font-size: 14px;
+        }
+
+        .tab-contents {
+            display: none;
+        }
+
+        .tab-contents.active-tab {
+            display: block;
+        }
+        .btn{
+            display: block;
+            margin: 20px auto;
+            margin-right: 250px;
+            width: fit-content;
+            border: 1px solid #ff004f;
+            padding: 14px 50px;
+            border-radius: 6px;
+            text-decoration: none;
+            color: #fff;
+            transition: background 0.5s;
+        }
+        .btn:hover{
+            background: #ff004f;
+        }
+    </style>
+</head>
+<body>
+<div id="about">
+    <div class="container">
+        <!-- About section content -->
+        <div class="row">
+            <div class="about-col-1">
+                <img src="user.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>"I am Sakshi Singh, a dedicated front-end developer currently pursuing my Bachelor of Technology (B.Tech) degree in the Information Technology (IT) branch. With a passion for crafting seamless and engaging user experiences, I strive to blend creativity and technology to create compelling web interfaces. I'm committed to staying at the forefront of web development trends and delivering user-centric designs that make a difference."</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('education')">Education</p>
+                    <p class="tab-links" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('certificates')">Certificates</p>
+                </div>
+                <div class="tab-contents active-tab" id="education">
+                    <ul>
+                        <li><span>2020-2024</span><br>Bachelor of Technology<br>Branch - Information Technology<br>from RAJKIYA ENGINEERING COLLEGE, BANDA</li>
+                        <li><span>2018-2019</span><br>Intermediate<br>from S.S.GIRLS INTER COLLEGE, KANPUR</li>
+                        <li><span>2016-2017</span><br>High School<br>from S.S.GIRLS INTER COLLEGE, KANPUR</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="skills">
+                    <ul>
+                        <li><span>Programming Languages</span><br>C Programming Language<br>C++<br>Python<br>Java</li>
+                        <li><span>Web Development</span><br>HTML5<br>CSS<br>Bootstrap<br>JavaScript<br>Node.js</li>
+                        <li><span>Database </span><br>SQL<br>MongoDB</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="certificates">
+                    <ul>
+                        <li><span>Certificate</span><br>Of Completion Cyber Security Skilling Program<br>by I.I,T Kanpur</li>
+                        <li><span>Certificate</span><br>Of Completion 1 Month Internship in Web Development<br>by Bharat Intern</li>
+                        <li><span>Certificate</span><br>Of Completion 1 Month Internship in Web Development<br>by Oasis Infobyte</li>
+                        <li><span>Certificate</span><br>Of Completion C Programming Language<br>by Great Learning</li>
+                        <li><span>Certificate</span><br>Of Completion 7-days Bootcamp on Back-End-Web Development <br>by Devtown</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <a href="index.html" class="btn">See more</a>
+</div>
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+
+    }
+
+</script>
+</body>
+</html>

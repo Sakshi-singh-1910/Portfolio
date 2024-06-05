@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/15b6513453.js" crossorigin="anonymous"></script>
+    <!-- Include your CSS and other metadata here -->
+    <style>
+        /*-----------------services--------------------*/
+#services{
+    padding: 120px 0;
+    align-items: center;
+    background-color: black;
+    color: #ababab;
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.services-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+    color: white;
+}
+.services-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+    color: white;
+}
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: white;
+}
+.services-list div a{
+    text-decoration: none;
+    color:black;
+    font-size: 20px;
+    margin-top: 20px;
+    display: inline-block;
+} 
+.services-list div a:hover{
+    background-color: white;
+}
+.services-list div:hover{
+    background: #ff004f;
+    transform: translateY(-10px);
+}
+.sub-title {
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center;
+    color: white; /* Set text color to white */
+    margin-top: auto;
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.5s;
+}
+.btn:hover{
+    background: #ff004f;
+}
+    </style>
+</head>
+<body>
+<!-- --------------services-------------- -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Developer</h2>
+                <p>As a web developer, I specialize in front-end development, where I craft the visual and interactive aspects of websites and web applications. My work involves using languages like HTML, CSS, and JavaScript to create user-friendly, responsive designs. Staying updated with the latest web development trends and technologies is crucial to deliver the best user experiences.</p>
+                <a href="project.html">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-database"></i>
+                <h2>Front-End Developer</h2>
+                <p>I specialize in Front-End Development, which is all about creating intuitive and visually appealing user interfaces. My skills in front-end development complement my database management expertise, enabling me to build complete, data-driven solutions that look great and work seamlessly.</p>
+                <a href="project.html">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i>
+                <h2>SQL</h2>
+                <p>As a SQL database expert, I possess a deep understanding of Structured Query Language (SQL) and its application in managing and manipulating data within relational databases. I have a strong command of database design, query optimization, and data modeling. My expertise extends to database administration, ensuring data integrity, security, and performance.</p>
+                <a href="project.html">Learn more</a>
+            </div>
+        </div>
+    </div>
+    <a href="index.html" class="btn">See more</a>
+</div>
+</body>
+</html>

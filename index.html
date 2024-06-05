@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>My Portfolio </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id = "header">
+    <div class="container">
+        <nav>
+            <img src="logo.png" class="logo">
+            <ul>
+                <li><a href="index.html#header">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="service.html">Service</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Web Development Designer</p>
+            <h1>Hi,I'm <br><span>Sakshi</span> Singh</h1>
+            <p>Hailing from the vibrant city of Kanpur. Currently,<br> I'm on an exciting journey, pursuing my graduation<br>in the field of Information Technology, aiming to<br> unlock the world of technology's endless <br>possibilities.</p>
+        </div>
+        <br>
+    </div>
+</div>
+<footer>   
+    <link rel='stylesheet'
+        href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css'>
+        By Sakshi Singh | All rights reserved | Contact Us: 9598086937
+    <h2 class="social">Let's get social</h2>
+    <div class="wrapper">
+        <a href="https://www.facebook.com/profile.php?id=100014301184719" class="icon facebook">
+            <div class="tooltip">Facebook</div>
+            <span><i class="fab fa-facebook-f"></i></span>
+        </a>
+        <a href=" https://www.instagram.com/invites/contact/?i=z8gv3yuym95d&utm_content=65ceu47" class="icon instagram">
+            <div class="tooltip">Instagram</div>
+            <span><i class="fab fa-instagram"></i></span>
+        </a>
+        <a href="https://github.com/Sakshi-singh-1910" class="icon github">
+            <div class="tooltip">Github</div>
+            <span><i class="fab fa-github"></i></span>
+        </a>
+        <a href="https://www.linkedin.com/in/sakshi-singh-393799222" class="icon linkedin">
+            <div class="tooltip">LinkedIn</div>
+            <span><i class="fab fa-linkedin"></i></span>
+        </a>
+        <a href="" class="icon youtube">
+            <div class="tooltip">Youtube</div>
+            <span><i class="fab fa-youtube"></i></span>
+        </a>
+    </div>
+    <a href="Sakshi_Singh_Resume_IT.pdf" download class= "btn btn2">Download CV</a>
+</footer>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+
+    }
+
+</script>
+
+</body>
+</html>
